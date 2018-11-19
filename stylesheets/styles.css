@@ -1,10 +1,12 @@
 body {
 	margin: 0;
 	overflow: hidden;
+	user-select: none;
+	font-family: "Arial", sans-serif;
 }
 .wrapper {
 	width: 100vw;
-	height: 100vh;
+	height: 100%;
 	position: absolute;
 	top: 0px;
 	left: 0px;
@@ -15,16 +17,22 @@ body {
 .topHalf {
 	position: relative;
 	width: 100vw;
-	height: 50vh;
+	height: 0vh;
 	z-index: 4;
 	transition: all 1s ease;
 }
 .bottomHalf {
 	position: relative;
 	width: 100vw;
-	height: 50vh;
+	height: 100vh;
 	background-color: rgb(93,112,0);
 	z-index: 10;
+}
+.bottomHalf p {
+	font-size: 6rem;
+	float: right;
+	margin-right: 4rem;
+	color: rgba(255,255,255,0.2);
 }
 .phone {
 	width: 25rem;
@@ -43,20 +51,52 @@ body {
 iframe {
 	width: 98%;
 	height: 89%;
-	margin: 2rem auto;
+	margin: 1rem auto;
 	border-radius: .5rem;
 	border: none;
+	transition: all .25s ease;
 }
-.button {
+.phoneButton {
 	width: 20%;
 	height: 1.8rem;
 	border-radius: 8px 8px 10px 10px;
 	margin: auto;
 	position: relative;
-	bottom: 1rem;
+	bottom: .4rem;
 	background-color: rgb(20,20,20);
 	cursor: pointer;
 }
-.button:hover {
+.phoneTop {
+	width: 60%;
+	height: 1rem;
+	margin: auto;
+	position: relative;
+	top: .5rem;
+	display: flex;
+}
+.speaker {
+	width: 50%;
+	height: 50%;
+	border-radius: 1rem;
+	background-color: rgb(20,20,20);
+	margin: auto;
+}
+.phoneCamera {
+	width: 1rem;
+	height: 1rem;
+	background-color: rgb(10,10,10);
+	border-radius: 1REM;
+	margin: auto;
+}
+.phoneButton:hover {
+	background-color: rgb(30,30,30);
+}
+.phoneButton:active {
 	background-color: rgb(70,70,70);
+}
+
+
+
+.trans {
+	opacity: 0;
 }
