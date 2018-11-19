@@ -3,6 +3,6 @@ $(document).ready(function() {
 	appear();
 });
 appear = () => {
-	$(".tophalf").css("height", "80%");
+	$(".topHalf").css("height", "70vh");
 	$(".phone").css("top", "10%");
 }
