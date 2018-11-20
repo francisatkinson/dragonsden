@@ -23,16 +23,19 @@ body {
 }
 .bottomHalf {
 	position: relative;
+	display: flex;
 	width: 100vw;
 	height: 100vh;
 	background-color: rgb(93,112,0);
 	z-index: 10;
+	justify-content: center;
 }
 .bottomHalf p {
 	font-size: 6rem;
-	float: right;
+	align-self: flex-end;
 	margin-right: 4rem;
 	color: rgba(255,255,255,0.2);
+	text-align: center;
 }
 .phone {
 	width: 25rem;
@@ -95,7 +98,11 @@ iframe {
 	background-color: rgb(70,70,70);
 }
 
-
+.showPhone {
+	position: absolute;
+	display: flex;
+	align-self: center;
+}
 
 .trans {
 	opacity: 0;

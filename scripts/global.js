@@ -1,5 +1,7 @@
 $(document).ready(function() {
-	appear();
+	$(".showPhone").click(function() {
+		appear();
+	});
 	$(".phoneButton").click(function() {
 		reset();
 	});
