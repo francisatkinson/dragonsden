@@ -36,9 +36,10 @@ body {
 	margin-right: 4rem;
 	color: rgba(255,255,255,0.2);
 	text-align: center;
+	cursor: pointer;
 }
 .phone {
-	width: 25rem;
+	width: 23rem;
 	height: 48rem;
 	display: flex;
 	position: absolute;

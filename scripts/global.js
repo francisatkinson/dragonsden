@@ -15,7 +15,7 @@ reset = () => {
 		$("#phone").css("opacity", "0");
 	}, 0);
 	setTimeout(function() {
-		$("#phone").attr("src", "app/index.html");
+		$("#phone").attr("src", "app/home.html");
 		$("#phone").css("opacity", "1");
 	}, 250);
 }
