@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$(".showPhone").click(function() {
+	$("body").click(function() {
 		appear();
 	});
 	$(".phoneButton").click(function() {
@@ -8,7 +8,7 @@ $(document).ready(function() {
 });
 appear = () => {
 	$(".topHalf").css("height", "70vh");
-	$(".phone").css("top", "10%");
+	$(".phone").css("top", "5%");
 }
 reset = () => {
 	setTimeout(function() {

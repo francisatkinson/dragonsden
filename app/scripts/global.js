@@ -34,7 +34,40 @@ $(document).ready(function() {
 	// 	hamburger();
 	// 	drawNearby(features);
 	// });
+
+	let zoomed = false;
+
+	$(".selector").click(function() {
+		$(".selector").removeClass("selectorActive");
+		let clickedFloor = $(this).attr("class").substr($(this).attr("class").length -1);
+		console.log(`selector${clickedFloor}`);
+		$(".floorplanImage").css("background-image", `url("img/floorplans/floor${clickedFloor}.png")`);
+		$(`.selector${clickedFloor}`).addClass("selectorActive");
+		removeZoom($(".floorplanImage"));
+	});
+	$(".floorplanImage").click(function() {
+		if (zoomed == false) {
+			let zoom = Math.floor(Math.random() * 3) + 1;
+			console.log(zoom);
+			$(this).addClass(`imageZoom${zoom}`);
+			zoomed = true;
+		}
+		else {
+			removeZoom($(this));
+			zoomed = false;
+		}
+		console.log(zoomed);
+	});
+	$(".selector").click(function() {
+		return false;
+	});
 });
+
+removeZoom = (element) => {
+	$(element).removeClass("imageZoom1");
+	$(element).removeClass("imageZoom2");
+	$(element).removeClass("imageZoom3");
+}
 
 hamburger = () => {
 	$(".overlay").fadeToggle();
